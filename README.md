@@ -1,8 +1,8 @@
-# vueify [![Build Status](https://circleci.com/gh/vuejs/vueify.svg?style=shield)](https://circleci.com/gh/vuejs/vueify) [![npm version](https://badge.fury.io/js/vueify.svg)](http://badge.fury.io/js/vueify)
+# vueify-next
 
-> [Browserify](http://browserify.org/) transform for [Vue.js](http://vuejs.org/) components, with scoped CSS and component hot-reloading.
+> [Browserify](http://browserify.org/) transform for [Vue.js](http://vuejs.org/) components, with scoped CSS and component hot-reloading. Fork based on the [original vueify package](https://github.com/vuejs/vueify) by Evan You.
 
-**NOTE: master branch now hosts version ^9.0, which only works with Vue ^2.0. Vueify 8.x which works with Vue 1.x is in the [8.x branch](https://github.com/vuejs/vueify/tree/8.x).**
+**Note: This package is now updated to utilize babel7, so please make sure your project is also using that babel version when using this fork.**
 
 This transform allows you to write your components in this format:
 
