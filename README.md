@@ -279,21 +279,21 @@ By default, the CSS in each component is injected into the page using a `<style>
 Via CLI:
 
 ``` bash
-browserify -t vueify -p [ vueify/plugins/extract-css -o dist/bundle.css ] main.js
+browserify -t vueify-next -p [ vueify-next/plugins/extract-css -o dist/bundle.css ] main.js
 ```
 
 Via API:
 
 ``` js
 browserify('./main.js')
-  .transform('vueify')
-  .plugin('vueify/plugins/extract-css', {
+  .transform('vueify-next')
+  .plugin('vueify-next/plugins/extract-css', {
     out: 'dist/bundle.css' // can also be a WritableStream
   })
   .bundle()
 ```
 
-This only works for vueify 9+. For Vue 1.x / vueify 8.x you can use [vueify-extract-css](https://github.com/rawcreative/vueify-extract-css).
+This only works for vueify 9+ and vueify-next. For Vue 1.x / vueify 8.x you can use [vueify-extract-css](https://github.com/rawcreative/vueify-extract-css).
 
 ## Building for Production
 
