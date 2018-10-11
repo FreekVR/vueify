@@ -65,8 +65,8 @@ You can `require()` other stuff in the `<script>` as usual. ~~Note that for CSS-
 ## Usage
 
 ``` bash
-npm install vueify --save-dev
-browserify -t vueify -e src/main.js -o build/build.js
+npm install vueify-next --save-dev
+browserify -t vueify-next -e src/main.js -o build/build.js
 ```
 
 And this is all you need to do in your main entry file:
@@ -112,14 +112,14 @@ Make sure to have the `NODE_ENV` environment variable set to `"production"` when
 
 If you are using Gulp, note that `gulp --production` **does not** affect vueify; you still need to explicitly set `NODE_ENV=production`.
 
-## ES2015 with Babel
+## Using Babel
 
-Vueify is pre-configured to work with Babel. Simply install Babel-related dependencies:
+Vueify is pre-configured to work with Babel 7 using preset-env. Simply install Babel-related dependencies:
 
 ``` bash
 npm install\
-  babel-core\
-  babel-preset-es2015\
+  @babel/core\
+  @babel/preset-env\
   --save-dev
 ```
 
@@ -127,13 +127,12 @@ Then create a `.babelrc`:
 
 ``` json
 {
-  "presets": ["es2015"]
+  "presets": ['@babel/preset-env']
+  // ... don't forget to add env presets!
 }
 ```
 
-And voila! You can now write ES2015 in your `*.vue` files. Note if you want to use ES2015 on normal `*.js` files, you will also need [babelify](https://github.com/babel/babelify).
-
-You can also configure babel with the `babel` field in `vue.config.js`, which will take the highest priority.
+And voila! You can now write ES2015+ in your `*.vue` files.
 
 ## Enabling Other Pre-Processors
 
@@ -323,7 +322,7 @@ Currently there are syntax highlighting support for [Sublime Text](https://githu
 
 ## Changelog
 
-Please see the [Releases](https://github.com/vuejs/vueify/releases) page for changes in versions ^9.0.0.
+Please see the [Releases](https://github.com/FreekVR/vueify/releases) page for changes.
 
 ## License
 
