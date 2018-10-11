@@ -1,6 +1,6 @@
 {
   "name": "vueify-next",
-  "version": "9.5.1",
+  "version": "9.5.2",
   "description": "Vue component transform for Browserify",
   "main": "index.js",
   "repository": {
